@@ -1,21 +1,38 @@
 import React from 'react';
-import { StyledFooter } from './styles/Footer.styled';
+import SocialIcons from './socialIcons';
+import { StyledFooter } from './styles/footer.styled';
 import { Container } from './styles/container.styled';
 import { Flex } from './styles/flex.styled';
+import { GrLocationPin, GrPhone, GrMailOption } from 'react-icons/gr';
 
 const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <img src="../../Assets/images/logo.svg" />
-                <Flex>
+                <img src="../../Assets/images/logo.svg" alt = ""/>
+                    <Flex>
                     <ul>
                         <li>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            <div>
+                                <GrLocationPin />
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor.
+                            </p>
                         </li>
-                        <li>+1-543-123-4567</li>
-                        <li>example@huddle.com</li>
+                        <li>
+                            <div>
+                                <GrPhone />
+                            </div>
+                            <p>+1-543-123-4567</p>
+                        </li>
+                        <li>
+                            <div>
+                                <GrMailOption />
+                            </div>
+                            <p>example@huddle.com</p>
+                        </li>
                     </ul>
                     <ul>
                         <li>About Us</li>
@@ -28,8 +45,10 @@ const Footer = () => {
                         <li>Blog</li>
                         <li>Contact Us</li>
                     </ul>
+
+                    <SocialIcons />
                 </Flex>
-                <p>&copy; 2021 Huddle All rights reserved.</p>
+                <p className="copyright">&copy; 2021 Huddle. All rights reserved.</p>
             </Container>
         </StyledFooter>
     )
